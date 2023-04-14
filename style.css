@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0px;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+body {
+    background-color: #226fc5;
+
+}
+
+header{
+    display: flex;
+    justify-content: center;
+}
+
+header img{
+    height: 45px;
+    margin: 15px 30px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.conteudo {
+    height: 500px;
+    width: 95%;
+    max-width: 480px;
+    padding: 3rem 2rem 0rem 2rem;
+    background-color: #f9f9f9;
+}
+
+.dados {
+    background-color: #ededed;
+    width: 100%;
+    height: 3rem;
+    margin-bottom: 1rem;
+}
+
+input[type="button"] {
+    color: #ededed;
+    border: solid;
+    border-color: #ededed;
+    border-radius: 15px;
+    background-color: #f9f9f9;
+    background-image: url(data:image/svg+xml;charset=utf8;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNC4yNzI3IDEwTDAuNSAxMEwwLjUgOEwxNC4yNzI1IDhMOC41MTM0NSAxLjcyNDk2TDkuODY1NzkgMC4yNTE0NjVMMTcuMjE4OSA4LjI2MzMzQzE3LjU5MjMgOC42NzAyMiAxNy41OTIzIDkuMzI5OTMgMTcuMjE4OSA5LjczNjgyTDkuODY1NzkgMTcuNzQ4N0w4LjUxMzQ1IDE2LjI3NTJMMTQuMjcyNyAxMFoiIGZpbGw9IiNFOEU4RTgiLz4KPC9zdmc+Cg==);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 5rem;
+    height: 5rem;
+}

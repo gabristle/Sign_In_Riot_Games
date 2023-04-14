@@ -30,32 +30,112 @@ main {
 h1 {
     font-weight: 600;
     font-size: 20px;
+    text-align: center;
+    margin-bottom: 10%;
 }
 
 .conteudo {
-    height: 500px;
+    height: 100%;
     width: 95%;
     max-width: 480px;
-    padding: 3rem 2rem 0rem 2rem;
+    padding: 3rem 2rem 2rem 2rem;
     background-color: #f9f9f9;
 }
 
 .dados {
+    font-weight: 700;
     background-color: #ededed;
     width: 100%;
-    height: 3rem;
+    height: 4rem;
     margin-bottom: 1rem;
+    text-indent: 5%;
 }
 
-input[type="button"] {
+
+input[type=button] {
     color: #ededed;
-    border: solid;
+    border: 2px solid;
     border-color: #ededed;
     border-radius: 15px;
     background-color: #f9f9f9;
     background-image: url(data:image/svg+xml;charset=utf8;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNC4yNzI3IDEwTDAuNSAxMEwwLjUgOEwxNC4yNzI1IDhMOC41MTM0NSAxLjcyNDk2TDkuODY1NzkgMC4yNTE0NjVMMTcuMjE4OSA4LjI2MzMzQzE3LjU5MjMgOC42NzAyMiAxNy41OTIzIDkuMzI5OTMgMTcuMjE4OSA5LjczNjgyTDkuODY1NzkgMTcuNzQ4N0w4LjUxMzQ1IDE2LjI3NTJMMTQuMjcyNyAxMFoiIGZpbGw9IiNFOEU4RTgiLz4KPC9zdmc+Cg==);
     background-repeat: no-repeat;
     background-position: center;
-    width: 5rem;
-    height: 5rem;
+    width: 6rem;
+    height: 6rem;
+    margin: 10% 0%;
+    cursor: pointer;
+}
+
+.redes-sociais {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    margin-bottom: 15px;
+}
+.facebook {
+    background-color: #226fc5;
+    width: 90px;
+    height: 70px;
+    padding: 0.8rem 0.8rem;
+    border-radius: 3px;
+}
+
+.facebook:hover {
+    background-color: #1e5fa8;
+}
+
+.google {
+    background-color: white;
+    width: 90px;
+    height: 70px;
+    padding: 0.8rem 1.2rem;
+    border-radius: 3px;
+}
+
+.google:hover {
+    background-color: rgb(236, 235, 235);
+}
+
+.apple {
+    background-color: #000000;
+    width: 90px;
+    height: 70px;
+    padding: 1rem 1.5rem;
+    border-radius: 3px;
+}
+
+.apple:hover {
+    background-color: rgb(27, 27, 27);
+}
+
+.microsoft {
+    background-color: #107c10;
+    width: 90px;
+    height: 70px;
+    padding: 1rem 0.8rem;
+    border-radius: 3px;
+}
+
+.microsoft:hover {
+    background-color: #0e660e;
+}
+
+.links{
+    text-align: center;
+    font-weight: 700;
+}
+
+.links a{
+    text-decoration: none;
+    color: #707070;
+}
+
+.button-conteiner{
+    display: flex;
+    justify-content: center;
+}
+
+a:hover{
+    color: #000000;
 }

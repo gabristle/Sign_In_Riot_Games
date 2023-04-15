@@ -29,7 +29,7 @@ main {
 
 h1 {
     font-weight: 600;
-    font-size: 20px;
+    font-size: 24px;
     text-align: center;
     margin-bottom: 10%;
 }
@@ -38,17 +38,24 @@ h1 {
     height: 100%;
     width: 95%;
     max-width: 480px;
-    padding: 3rem 2rem 2rem 2rem;
+    padding: 5rem 3rem 2rem 3rem;
     background-color: #f9f9f9;
+    border-radius: 3px;
 }
 
 .dados {
+    font-size: 14px;
     font-weight: 700;
     background-color: #ededed;
     width: 100%;
     height: 4rem;
     margin-bottom: 1rem;
     text-indent: 5%;
+    border-radius: 3px;
+}
+
+.dados:focus{
+    background-color: #f9f9f9;
 }
 
 
@@ -61,8 +68,8 @@ input[type=button] {
     background-image: url(data:image/svg+xml;charset=utf8;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNC4yNzI3IDEwTDAuNSAxMEwwLjUgOEwxNC4yNzI1IDhMOC41MTM0NSAxLjcyNDk2TDkuODY1NzkgMC4yNTE0NjVMMTcuMjE4OSA4LjI2MzMzQzE3LjU5MjMgOC42NzAyMiAxNy41OTIzIDkuMzI5OTMgMTcuMjE4OSA5LjczNjgyTDkuODY1NzkgMTcuNzQ4N0w4LjUxMzQ1IDE2LjI3NTJMMTQuMjcyNyAxMFoiIGZpbGw9IiNFOEU4RTgiLz4KPC9zdmc+Cg==);
     background-repeat: no-repeat;
     background-position: center;
-    width: 6rem;
-    height: 6rem;
+    width: 5rem;
+    height: 5rem;
     margin: 10% 0%;
     cursor: pointer;
 }
@@ -73,12 +80,16 @@ input[type=button] {
     flex-direction: row;
     margin-bottom: 15px;
 }
+
+.social-box{
+    border-radius: 5px;
+    width: 5rem;
+    height: 2.5rem;
+}
+
 .facebook {
     background-color: #226fc5;
-    width: 90px;
-    height: 70px;
-    padding: 0.8rem 0.8rem;
-    border-radius: 3px;
+    padding: 0.5rem;
 }
 
 .facebook:hover {
@@ -87,10 +98,8 @@ input[type=button] {
 
 .google {
     background-color: white;
-    width: 90px;
-    height: 70px;
-    padding: 0.8rem 1.2rem;
-    border-radius: 3px;
+    padding: 0.5rem;
+    border: solid #ededed;
 }
 
 .google:hover {
@@ -99,10 +108,7 @@ input[type=button] {
 
 .apple {
     background-color: #000000;
-    width: 90px;
-    height: 70px;
-    padding: 1rem 1.5rem;
-    border-radius: 3px;
+    padding: 0.6rem 1.8rem;
 }
 
 .apple:hover {
@@ -111,10 +117,7 @@ input[type=button] {
 
 .microsoft {
     background-color: #107c10;
-    width: 90px;
-    height: 70px;
-    padding: 1rem 0.8rem;
-    border-radius: 3px;
+    padding: 0.5rem;
 }
 
 .microsoft:hover {
@@ -122,6 +125,7 @@ input[type=button] {
 }
 
 .links{
+    font-size: 12px;
     text-align: center;
     font-weight: 700;
 }
@@ -131,11 +135,50 @@ input[type=button] {
     color: #707070;
 }
 
-.button-conteiner{
+.button-conteiner {
     display: flex;
     justify-content: center;
 }
 
-a:hover{
+a:hover {
     color: #000000;
+}
+
+footer {
+    margin-top: 5%;
+    text-align: center;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: white;
+}
+
+footer a {
+    opacity: 50%;
+    color: white;
+    text-decoration: none;
+}
+
+footer p {
+    opacity: 50%;
+    margin: 10px 0px;
+}
+
+footer a:hover {
+    color: white;
+}
+
+.link-github{
+    opacity: 100%;
+}
+
+select {
+    margin: 0rem 0px 2rem 0px;
+    font-weight: 700;
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    border: solid rgba(255, 255, 255, 0.0);
+    border-width: 2px;
+    border-radius: 3px;
+    height: 45px;
+    text-indent: 5px;
 }

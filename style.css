@@ -8,10 +8,11 @@
 }
 
 body {
-    background-image: url(https://images7.alphacoders.com/511/511163.jpg);
+    background-image: url(https://lolstatic-a.akamaihd.net/rso-login-page/3.2.36/assets/arcane_dsktp_centerAlignedCrd_BG_2x.jpg);
     background-size: cover;
+    background-position: 80%;
     min-height: 100vh;
-    min-width: 100vw;
+    max-width: 100vw;
 }
 
 header img{
@@ -175,6 +176,10 @@ footer a:hover {
     opacity: 100%;
 }
 
+footer .footer-mobile{
+    display: none;
+}
+
 select {
     font-weight: 700;
     background: rgba(255, 255, 255, 0.3);
@@ -184,6 +189,28 @@ select {
     border-radius: 10px;
     height: 30px;
     text-indent: 5px;
+}
+
+.custom-checkbox input {
+    display: none;
+}
+
+.custom-checkbox input + label:before{
+    content: '';
+    width: 18px;
+    height: 18px;
+    background-color: #ededed;
+    display: inline-block;
+    border: 1px solid #ededed;
+    border-radius: 5px;
+    vertical-align: middle;
+    margin-right: 8px;
+    margin-bottom: 3px;
+}
+
+.custom-checkbox input:checked + label:before {
+    background-color: rgb(218, 19, 19);
+    background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 10 10'%3E%3Cg class='nc-icon-wrapper' stroke-width='1' fill='%23555555'%3E%3Cpath fill='none' stroke='%23FFFFFF' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' data-cap='butt' d='M2.83 4.72l1.58 1.58 2.83-2.83'/%3E%3C/g%3E%3C/svg%3E");
 }
 
 @media only screen and (min-width: 300px) and (max-width: 500px) {
@@ -227,26 +254,15 @@ select {
         height: 45px;
         margin: 15px 30px;
     }
+    footer .footer-desktop{
+        display: none;
+    }
+    footer .footer-mobile{
+        display: block;
+    }
+
+    select{
+        margin: 1rem;
+    }
 }
 
-.custom-checkbox input {
-    display: none;
-}
-
-.custom-checkbox input + label:before{
-    content: '';
-    width: 18px;
-    height: 18px;
-    background-color: #ededed;
-    display: inline-block;
-    border: 1px solid #ededed;
-    border-radius: 5px;
-    vertical-align: middle;
-    margin-right: 8px;
-    margin-bottom: 3px;
-}
-
-.custom-checkbox input:checked + label:before {
-    background-color: rgb(218, 19, 19);
-    background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 10 10'%3E%3Cg class='nc-icon-wrapper' stroke-width='1' fill='%23555555'%3E%3Cpath fill='none' stroke='%23FFFFFF' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' data-cap='butt' d='M2.83 4.72l1.58 1.58 2.83-2.83'/%3E%3C/g%3E%3C/svg%3E");
-}

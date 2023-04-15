@@ -9,17 +9,13 @@
 
 body {
     background-color: #226fc5;
-
-}
-
-header{
-    display: flex;
-    justify-content: center;
+    min-height: 100vh;
+    min-width: 100vw;
 }
 
 header img{
-    height: 45px;
-    margin: 15px 30px;
+    height: 70px;
+    margin: 25px 30px;
 }
 
 main {
@@ -51,7 +47,7 @@ h1 {
     height: 4rem;
     margin-bottom: 1rem;
     text-indent: 5%;
-    border-radius: 3px;
+    border-radius: 5px;
 }
 
 .dados:focus{
@@ -145,11 +141,12 @@ a:hover {
 }
 
 footer {
-    margin-top: 5%;
-    text-align: center;
+    padding-left: 3%;
+    margin-top: 8%;
     font-weight: 500;
     text-transform: uppercase;
     color: white;
+    font-size: 12px;
 }
 
 footer a {
@@ -159,6 +156,7 @@ footer a {
 }
 
 footer p {
+    font-size: 10px;
     opacity: 50%;
     margin: 10px 0px;
 }
@@ -172,13 +170,55 @@ footer a:hover {
 }
 
 select {
-    margin: 0rem 0px 2rem 0px;
     font-weight: 700;
     background: rgba(255, 255, 255, 0.3);
     color: white;
     border: solid rgba(255, 255, 255, 0.0);
     border-width: 2px;
-    border-radius: 3px;
-    height: 45px;
+    border-radius: 10px;
+    height: 30px;
     text-indent: 5px;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 500px) {
+    header{
+        display: flex;
+        justify-content: center;
+    }
+    .conteudo {
+        height: 100%;
+        width: 95%;
+        padding: 3rem 1.5rem 2rem 1.5rem;
+    }
+    h1{
+        font-size: 18px;
+    }
+    .social-box{
+        width: 3.5rem;
+        height: 2.5rem;
+    }
+    .apple {
+        background-color: #000000;
+        padding: 0.5rem 1rem;
+    }
+    .dados {
+        font-size: 10px;
+        width: 100%;
+        height: 4rem;
+    }
+    header img{
+        height: 45px;
+        margin: 15px 30px;
+    }
+    footer{
+        font-size: 10px;
+        text-align: center;
+    }
+    footer p {
+        font-size: 8px
+    }
+    header img{
+        height: 45px;
+        margin: 15px 30px;
+    }
 }

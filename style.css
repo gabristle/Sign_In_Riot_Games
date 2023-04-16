@@ -10,7 +10,7 @@
 body {
     background-image: url(https://lolstatic-a.akamaihd.net/rso-login-page/3.2.36/assets/arcane_dsktp_centerAlignedCrd_BG_2x.jpg);
     background-size: cover;
-    background-repeat: none;
+    background-repeat: no-repeat;
     background-position: 80%;
     min-height: 100vh;
     max-width: 100vw;

@@ -34,7 +34,187 @@ h1 {
     margin-bottom: 10%;
 }
 
-.conteudo {
+.conteudo{
+    display: flex;
+    flex-direction: row;
+    align-items: normal;
+    justify-content: space-evenly;
+}
+
+main{
+    background-color: #f9f9f9;
+    padding: 5%;
+    height: 100%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog{
+    width: 100%;
+}
+
+.main-head{
+    margin-top: 0px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#novo-post{
+    background-color: rgb(218, 19, 19);
+    padding: 1% 2%;
+    color: #f9f9f9;
+    border-radius: 5px;
+}
+
+#novo-post:hover{
+    background-color: rgb(195, 19, 19);
+}
+
+.post{
+    width: 100%;
+    padding: 3% 0%;
+    word-wrap: break-word;
+}
+
+.post div{
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    margin: 5% 0% 0% 0%;
+}
+
+.post h2{
+    font-size: 28px;
+}
+
+.post img{
+    width: 70%;
+    align-self: center;
+    margin: 5% 0%;
+}
+
+.search{
+    display: flex;
+    flex-direction: row;
+}
+
+.search input{  
+    background-color: #ededed;
+    padding: 2% 10% 2% 5%;
+    border-radius: 5px;
+}
+
+.search input:hover{
+    background-color: #e7e6e6;
+}
+
+.search img{
+    margin-left: -10%;
+    width: 8%;
+}
+
+dialog{
+    display: none;
+}
+
+#dialogBox[open] {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 50%;
+    font-size: 24px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: #000000;
+}
+
+#postTitle{
+    border-radius: 5px;
+    background-color: #ededed;
+    padding: 3%;
+    margin: 2%;
+}
+
+#postImage{
+    margin: 0% 2%;
+}
+
+.imagem-insert{
+    font-size: 18px;
+    margin: 2% 4%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#dialogBox textarea{
+    margin: 2% 0% 2% 2%;
+    border-radius: 5px;
+    background-color: #ededed;
+    padding: 2% 4%;
+    resize: none;
+    width: 95.8%;
+}
+
+#dialogBox button{
+    background-color: rgb(218, 19, 19);
+    color: #f9f9f9;
+    padding: 1% 2%;
+    border-radius: 5px;
+    width: 30%;
+    align-self: center;
+}
+
+#dialogBox button:hover{
+    background-color: rgb(195, 19, 19);
+}
+
+#dialogBox h2{
+    margin: 2% 4%;
+    font-weight:600;
+    font-size: 24px;
+}
+
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.close {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #000;
+}
+
+div.button-div{
+    display: flex;
+    flex-direction: row;
+}
+
+.button-div button{
+    margin-right: 1%;
+    background-color: rgb(218, 19, 19);
+    height: 2rem;
+    width: 2rem;
+    border-radius: 5px;
+}
+
+.button-div button:hover{
+    background-color: rgb(195, 19, 19);
+}
+
+.conteudo-login {
     height: 100%;
     width: 95%;
     max-width: 480px;

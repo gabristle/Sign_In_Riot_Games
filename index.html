@@ -52,7 +52,7 @@
                     </div>
                     <br />
                     <div class="button-conteiner">
-                        <input type="button" />
+                        <button></button>
                     </div>
                     <div class="links">
                         <a href="#">NÃO CONSEGUE FAZER LOGIN?</a>
@@ -80,6 +80,15 @@
                         </div>
                         <textarea id="postText" placeholder="Texto do Post"></textarea>
                         <button id="addPost">Adicionar Post</button>
+                    </dialog>
+                    <dialog id="dialogEditar">
+                        <span class="close" title="Fechar">X</span>
+                        <label for="tituloEditar">Título:</label>
+                        <input type="text" id="tituloEditar">
+                        <label for="textoEditar">Texto:</label>
+                        <textarea id="textoEditar"></textarea>          
+                        <button type="button" id="cancelarEditar">Cancelar</button>
+                        <button type="submit" id="salvarEditar">Salvar</button>
                     </dialog>
                     <div class="post">
                     </div>

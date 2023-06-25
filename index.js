@@ -6,25 +6,35 @@ class Post {
   }
 
   static adicionarPost() {
-    const fileInput = document.getElementById('postImage');
-    const file = fileInput.files[0];
+    const imgInput = document.getElementById('postImage');
+    const img = imgInput.files[0];
     const titulo = document.getElementById('postTitle').value;
     const texto = document.getElementById('postText').value;
 
-    if (file && titulo && texto) {
+    if (img && titulo && texto) {
       const reader = new FileReader();
       reader.onload = function() {
         const imagem = reader.result;
         const post = new Post(titulo, imagem, texto);
+        let posts = JSON.parse(localStorage.getItem('posts')) || [];
         posts.push(post);
+
+        localStorage.setItem('posts', JSON.stringify(posts));
+
         Post.exibirPost();
-        Post.close();
         Post.limpar();
+        Post.close();
       };
-      reader.readAsDataURL(file);
+      reader.readAsDataURL(img);
     } else {
       window.alert('Todos os campos devem estar preenchidos!');
     }
+  }
+ 
+  static limpar() {
+    document.getElementById('postTitle').value = '';
+    document.getElementById('postImage').value = '';
+    document.getElementById('postText').value = '';
   }
 
   static close() {
@@ -32,16 +42,12 @@ class Post {
     postDialog.close();
   }
 
-  static limpar() {
-    document.getElementById('postTitle').value = '';
-    document.getElementById('postImage').value = '';
-    document.getElementById('postText').value = '';
-  }
-
   static exibirPost() {
     const postsDiv = document.querySelector('.post');
     postsDiv.innerHTML = '';
 
+    let posts = JSON.parse(localStorage.getItem('posts')) || [];
+    
     posts.reverse().forEach((post, index) => {
       const postDiv = document.createElement('div');
       postDiv.classList.add('post-item');
@@ -87,12 +93,15 @@ class Post {
   }
 
   static excluirPost(index) {
-    posts.splice(index, 1);
+    let storedPosts = JSON.parse(localStorage.getItem('posts')) || [];
+    storedPosts.reverse().splice(index, 1);
+    localStorage.setItem('posts', JSON.stringify(storedPosts));
     Post.exibirPost();
   }
 
   static abrirEditar(index) {
-    const post = posts[index];
+    let storedPosts = JSON.parse(localStorage.getItem('posts')) || [];
+    const post = storedPosts[index];
     const tituloInput = document.getElementById('tituloEditar');
     const textoInput = document.getElementById('textoEditar');
     const dialogEdit = document.getElementById('dialogEditar');
@@ -110,6 +119,9 @@ class Post {
     salvarBtn.addEventListener('click', () => {
       post.titulo = tituloInput.value;
       post.texto = textoInput.value;
+
+      storedPosts[index] = post;
+      localStorage.setItem('posts', JSON.stringify(storedPosts));
 
       dialogEdit.close();
       Post.exibirPost();

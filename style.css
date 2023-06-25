@@ -216,7 +216,8 @@ div.button-div{
 
 .conteudo-login {
     height: 100%;
-    width: 95%;
+    max-height: 800px;
+    width: 80%;
     max-width: 480px;
     padding: 5rem 3rem 2rem 3rem;
     background-color: #f9f9f9;

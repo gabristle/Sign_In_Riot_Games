@@ -151,6 +151,7 @@ class Post {
 // Armazenar dados coletados no dialog em um array
 const posts = [];
 
+Post.exibirPost();
 Post.buscarPost();
 
 // Adicionando evento de clique ao botão "Adicionar Post"

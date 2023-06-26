@@ -175,6 +175,29 @@ class Post {
     }
   }
 
+  static validaImagemEd(imagem){
+    const extensao = ['.jpg', '.jpeg', '.png'];
+    const imgInput = document.getElementById('imagemEditar');
+    const imgErro = document.getElementById('imagem-erro-ed');
+
+    if(imagem){
+      const nomeImg = imagem.name;
+      const extensaoImg = nomeImg.substring(nomeImg.lastIndexOf('.')).toLowerCase();
+
+      if(!extensao.includes(extensaoImg)){
+        imgInput.classList.add('erro');
+        imgErro.textContent = 'A imagem deve ter alguma das extensoes: JPG, PNG ou JPEG';
+        return false;
+      }else{
+        imgInput.classList.remove('erro');
+        imgErro.textContent = '';
+        return true;
+      }
+    }else{
+      return true;
+    }
+  }
+
   static excluirPost(index) {
     let storedPosts = JSON.parse(localStorage.getItem('posts')) || [];
     storedPosts.reverse().splice(index, 1);
@@ -187,6 +210,7 @@ class Post {
     const post = storedPosts.reverse()[index];
     const tituloInput = document.getElementById('tituloEditar');
     const textoInput = document.getElementById('textoEditar');
+    const imagemInput = document.getElementById('imagemEditar');
     const dialogEdit = document.getElementById('dialogEditar');
     const cancelarBtn = document.getElementById('cancelarEditar');
     const salvarBtn = document.getElementById('salvarEditar');
@@ -202,16 +226,31 @@ class Post {
     salvarBtn.addEventListener('click', () => {
       const novoTitulo = tituloInput.value;
       const novoTexto = textoInput.value;
+      const novaImagem = imagemInput.files[0];
 
-      if(Post.validaTituloEd(novoTitulo) && Post.validaTextoEd(novoTexto)){
+      if(Post.validaTituloEd(novoTitulo) && Post.validaTextoEd(novoTexto) && Post.validaImagemEd(novaImagem)){
         post.titulo = novoTitulo;
         post.texto = novoTexto;
+        if(novaImagem){
+          const reader = new FileReader();
+          reader.onload = function() {
+            const novaImg = reader.result;
+            post.imagem = novaImg;
 
-        storedPosts.reverse();
-        localStorage.setItem('posts', JSON.stringify(storedPosts));
+            storedPosts.reverse();
+            localStorage.setItem('posts', JSON.stringify(storedPosts));
 
-        dialogEdit.close();
-        Post.exibirPost();
+            dialogEdit.close();
+            Post.exibirPost();
+          };
+          reader.readAsDataURL(novaImagem);
+        }else{
+          storedPosts.reverse();
+          localStorage.setItem('posts', JSON.stringify(storedPosts));
+  
+          dialogEdit.close();
+          Post.exibirPost();
+        }
       }
     });
   }

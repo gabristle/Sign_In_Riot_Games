@@ -85,15 +85,21 @@
                         <button id="addPost">Adicionar Post</button>
                     </dialog>
                     <dialog id="dialogEditar">
-                        <span class="close" title="Fechar">X</span>
                         <label for="tituloEditar">Título:</label>
                         <input type="text" id="tituloEditar">
                         <span id="titulo-erro-ed"></span>
+                        <div class="imagem-insert">
+                            <label for="imagemEditar">Alterar Imagem:</label>
+                            <input type="file" id="imagemEditar" accept="image/*">
+                        </div>
+                        <span id="imagem-erro-ed"></span>
                         <label for="textoEditar">Texto:</label>
                         <textarea id="textoEditar"></textarea>  
                         <span id="texto-erro-ed"></span>        
-                        <button type="button" id="cancelarEditar">Cancelar</button>
-                        <button type="submit" id="salvarEditar">Salvar</button>
+                        <div class="botoes">
+                            <button type="button" id="cancelarEditar">Cancelar</button>
+                            <button type="submit" id="salvarEditar">Salvar</button>
+                        </div>
                     </dialog>
                     <div class="post">
                     </div>

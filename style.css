@@ -181,6 +181,17 @@ dialog button{
     align-self: center;
 }
 
+#dialogEditar button{
+    margin: 0.5%;
+}
+
+.botoes{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+}
+
 dialog button:hover{
     background-color: rgb(195, 19, 19);
 }

@@ -74,19 +74,24 @@
                         <span class="close" title="Fechar">X</span>
                         <h2>Adicionar Novo Post</h2>
                         <input type="text" id="postTitle" placeholder="Título do Post" />
+                        <span id="titulo-erro"></span>
                         <div class="imagem-insert">
                             <p>Adicione uma imagem:</p>
                             <input type="file" id="postImage" accept="image/*" />
                         </div>
+                        <span id="imagem-erro"></span>
                         <textarea id="postText" placeholder="Texto do Post"></textarea>
+                        <span id="texto-erro"></span>
                         <button id="addPost">Adicionar Post</button>
                     </dialog>
                     <dialog id="dialogEditar">
                         <span class="close" title="Fechar">X</span>
                         <label for="tituloEditar">Título:</label>
                         <input type="text" id="tituloEditar">
+                        <span id="titulo-erro-ed"></span>
                         <label for="textoEditar">Texto:</label>
-                        <textarea id="textoEditar"></textarea>          
+                        <textarea id="textoEditar"></textarea>  
+                        <span id="texto-erro-ed"></span>        
                         <button type="button" id="cancelarEditar">Cancelar</button>
                         <button type="submit" id="salvarEditar">Salvar</button>
                     </dialog>

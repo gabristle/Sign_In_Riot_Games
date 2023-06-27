@@ -86,6 +86,12 @@ class Post {
       postTexto.textContent = post.texto;
       postDiv.appendChild(postTexto);
 
+      const dataAtual = new Date();
+      const postData = document.createElement('p');
+      postData.classList.add('data');
+      postData.textContent = `Data: ${dataAtual.toLocaleDateString()}`;
+      postDiv.appendChild(postData);
+
       postsDiv.appendChild(postDiv);
     });
   }
